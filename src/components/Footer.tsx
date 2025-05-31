@@ -1,5 +1,5 @@
 
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Mail, Heart, Code } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -27,6 +27,14 @@ const Footer = () => {
               className="bg-gray-700 p-3 rounded-full hover:bg-gray-600 transition-colors"
             >
               <Github size={20} />
+            </a>
+            <a 
+              href="https://leetcode.com/u/Tejaswi_0412/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-orange-600 p-3 rounded-full hover:bg-orange-700 transition-colors"
+            >
+              <Code size={20} />
             </a>
             <a 
               href="mailto:tejaswi.domakuntla@gmail.com"

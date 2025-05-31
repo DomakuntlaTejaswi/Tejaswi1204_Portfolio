@@ -10,17 +10,20 @@ const Projects = () => {
       features: [
         "Designed and implemented efficient algorithms for handling various transactions",
         "Including item selection, quantity management, and billing calculations"
-      ]
+      ],
+      githubLink: "https://github.com/DomakuntlaTejaswi/Movie-Sanck-Billing-System/tree/main"
     },
     {
-      title: "Graduate Analysis and Admission Prediction",
-      description: "Implemented models evaluated with metrics, optimized through selection and tuning, with libraries using scikit-learn, pandas, numpy, and matplotlib documented in Jupyter notebooks.",
-      technologies: ["Python", "Jupyter Notebook", "Machine Learning"],
+      title: "Online Food Order System",
+      description: "Developed a comprehensive online food ordering platform that allows users to browse menu items, place orders, and manage their food delivery preferences with an intuitive user interface.",
+      technologies: ["HTML", "CSS", "JavaScript"],
       features: [
-        "Data analysis and visualization",
-        "Predictive modeling for admission outcomes",
-        "Statistical analysis and insights"
-      ]
+        "Interactive menu browsing and item selection",
+        "User-friendly order management system",
+        "Responsive design for seamless user experience",
+        "Real-time order tracking and updates"
+      ],
+      githubLink: "https://github.com/DomakuntlaTejaswi/Online-food-order-system"
     },
     {
       title: "SHair - Hair Care Platform",
@@ -30,7 +33,8 @@ const Projects = () => {
         "Personalized hair care recommendations",
         "Dynamic and responsive user interface",
         "AI-integrated planning for user recommendations"
-      ]
+      ],
+      githubLink: "https://github.com/DomakuntlaTejaswi/SHair"
     }
   ];
 
@@ -44,7 +48,17 @@ const Projects = () => {
         <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
             <div key={index} className="bg-gray-50 rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
-              <h3 className="text-2xl font-semibold text-gray-800 mb-4">{project.title}</h3>
+              <div className="flex justify-between items-start mb-4">
+                <h3 className="text-2xl font-semibold text-gray-800">{project.title}</h3>
+                <a 
+                  href={project.githubLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 transition-colors"
+                >
+                  <Github size={20} />
+                </a>
+              </div>
               <p className="text-gray-600 mb-6 leading-relaxed">{project.description}</p>
               
               <div className="mb-6">
